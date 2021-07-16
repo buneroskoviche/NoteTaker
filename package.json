@@ -1,14 +1,24 @@
 {
-  "name": "note-taker",
+  "name": "Develop",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buneroskoviche/NoteTaker.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buneroskoviche/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/buneroskoviche/NoteTaker#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.1"
   }
 }
