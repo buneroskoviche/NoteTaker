@@ -7,8 +7,8 @@ const path = require('path');
 module.exports = (app) => {
 
     app.get('/api/notes', (req, res) => {
-        const notes = require('../db/db.json');
-        res.json(notes)
+        const notes = readData();
+        res.json(notes);
     });
 
     // Response to post request
