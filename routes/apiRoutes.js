@@ -7,6 +7,7 @@ const path = require('path');
 module.exports = (app) => {
 
     app.get('/api/notes', (req, res) => {
+        // Read the data from file and send
         const notes = readData();
         res.json(notes);
     });
@@ -25,6 +26,7 @@ module.exports = (app) => {
         notesArr.push(newNote);
         
         try {
+            // Save the data to file
             saveData(notesArr);
             res.json(notesArr);
         } catch (error) {
@@ -55,6 +57,7 @@ module.exports = (app) => {
 
 const readData = () => {
     try {
+        // Parse the db.json file and return it
         const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../db/db.json'), 'utf-8'));
         return data;
     } catch (err) {
@@ -65,6 +68,7 @@ const readData = () => {
 
 const saveData = (array) => {
     try {
+        // Save an array to file in json format
         fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(array, null, 2));
         return true;
     } catch (err) {
